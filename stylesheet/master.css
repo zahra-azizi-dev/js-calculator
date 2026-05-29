@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+body {
+    transition: .4s;
+    background: linear-gradient(to top right, #f8fafc, #acc4e2);
+    min-height: 100vh;
+
+    .calculat {
+        transition: .4s;
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px);
+    }
+
+    .headerCal,
+    .number,
+    .operator,
+    .decimal,
+    .backspace,
+    .equal,
+    .toggle,
+    #export,
+    #result {
+        transition: .4s;
+    }
+
+    .toggle {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sun {
+        position: absolute;
+        inset: 0;
+        transition: .5s;
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+
+    .moon {
+        position: absolute;
+        inset: 0;
+        transition: .5s;
+        transform: translateX(30px) scale(0);
+        opacity: 0;
+    }
+
+    .number {
+        background: #fefce8;
+        color: #1e293b;
+
+        &:hover {
+            background: #fde68a;
+        }
+    }
+
+    .operator,
+    .decimal,
+    .backspace {
+        background: #f59e0b;
+        color: white;
+
+        &:hover {
+            background: #d97706;
+        }
+    }
+
+    .equal {
+        background: #059669;
+        color: white;
+
+        &:hover {
+            background: #047857;
+        }
+    }
+
+    #export {
+        background: rgba(255, 255, 255, 0.4);
+        color: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    #result {
+        color: #78350f;
+    }
+
+    &.night {
+        background: linear-gradient(to top right, #0f172a, #1e293b);
+
+        .calculat {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .headerCal {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .number {
+            background: #334155;
+            color: #f1f5f9;
+
+            &:hover {
+                background: #475569;
+            }
+        }
+
+        .operator,
+        .decimal,
+        .backspace {
+            background: #d97706;
+
+            &:hover {
+                background: #f59e0b;
+            }
+        }
+
+        .equal {
+            background: #047857;
+
+            &:hover {
+                background: #059669;
+            }
+        }
+
+        #export {
+            background: rgba(15, 23, 42, 0.6);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        #result {
+            color: #fef3c7;
+        }
+
+        .toggle {
+            background: #334155;
+
+            &:hover {
+                background: #475569;
+            }
+        }
+
+        .sun {
+            transform: translateX(-30px) scale(0);
+            opacity: 0;
+        }
+
+        .moon {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+}
